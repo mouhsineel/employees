@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="itememployee"
+            type="com.mel.employee.data.Employee" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/grayborder">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvfname"
+            android:text="@{itememployee.first_name}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="@{itememployee.last_name}"
+            android:id="@+id/tvlname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvemail"
+            android:text="@{itememployee.email}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+        <ImageView
+            app:avatar="@{itememployee.avatar}"
+            android:id="@+id/imgavatar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_weight="4"
+
+            />
+
+    </LinearLayout>
+
+</layout>
